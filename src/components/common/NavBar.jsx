@@ -4,7 +4,7 @@ import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 const NavBar = () => {
   return (
     <>
-      <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+      <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="navBar">
         <Container>
           <Navbar.Brand href="#home" >
             <img  src={Logo} alt="logo" width={100} />
@@ -19,7 +19,7 @@ const NavBar = () => {
 
               <span className="navbar-text ">
                 <div className="social-icon ">
-                  <a className="NavLink" href="https://github.com/SheylaAstorga"><i className="bi bi-github logo-git fs-4 me-3 ms-lg-3" ></i></a>
+                  <a className="NavLink" href="https://github.com/SheylaAstorga"><i className="bi bi-github logo-git fs-4 me-3 ms-3" ></i></a>
                   <a className="NavLink" href="https://www.linkedin.com/in/sheyla-luciana-astorga-40013a248/"><i className="bi bi-linkedin logo-link fs-4"></i></a>
                 </div>
               </span>
