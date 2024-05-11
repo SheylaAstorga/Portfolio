@@ -1,9 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
+import NavBar from "./components/common/NavBar";
+
 
 function App() {
   return <>
-  <h1 className="text-center mt-5">Bienvenidos a mi portfolio</h1>
+  <NavBar></NavBar>
+  <h1 className="text-center mt-5 colorTexto">Bienvenidos a mi portfolio</h1>
   </>;
 }
 

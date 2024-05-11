@@ -1,1 +1,26 @@
+#root{
+  font-family: "BioRhyme", serif;
+  
+}
 
+body{
+  background-color: #f9fafd;
+  background-image: linear-gradient(100deg, #f9fafd 0%, #dcd0fb 100%);
+  
+
+  
+
+}
+
+.miLogo{
+  width: 2em;
+}
+
+.NavLink:hover {
+  color: rgb(223, 212, 229);
+  text-shadow: 0 0 5px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
+}
+
+.colorTexto{
+ color: rgb(110, 15, 198);
+}
