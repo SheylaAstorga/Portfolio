@@ -1,35 +1,274 @@
-import React from "react";
-import { Container, Image } from "react-bootstrap";
+import {
+  Card,
+  Container,
+  Button,
+  Carousel,
+  Modal,
+  Row,
+  Col,
+} from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faGit,
+  faNodeJs,
+} from "@fortawesome/free-brands-svg-icons";
 import banner from "../../assets/banner.png";
-import logo from "../../assets/logoPerfil.png";
+import sazon from "../../assets/sazondelalma.png";
+import ritmoweb from "../../assets/ritmoWeb.png";
+import donapirola from "../../assets/donapirola.png";
+import mongodb from "../../assets/mongodb.png";
+import banneranime from "../../assets/bannerPort.png";
+
+const skillsData = [
+  {
+    category: "Frontend",
+    skills: [
+      { name: "HTML", icon: faHtml5 , } ,
+      { name: "CSS", icon: faCss3Alt },
+      { name: "JavaScript", icon: faJs },
+      { name: "React", icon: faReact },
+      { name: "Bootstrap", icon: "bootstrap-icon" },
+      { name: "React Bootstrap", icon: "react-bootstrap-icon" },
+    ],
+  },
+  {
+    category: "Backend",
+    skills: [
+      { name: "Node.js", icon: faNodeJs },
+      { name: "Express", icon: "express-icon" },
+    ],
+  },
+  {
+    category: "Bases de Datos",
+    skills: [
+      { name: "MongoDB", icon: "mongodb-icon" },
+      { name: "Mongoose", icon: "mongoose-icon" },
+    ],
+  },
+  {
+    category: "Autenticación y Seguridad",
+    skills: [
+      { name: "JWT", icon: "jwt-icon" },
+      { name: "bcrypt", icon: "bcrypt-icon" },
+    ],
+  },
+  {
+    category: "Herramientas",
+    skills: [
+      { name: "GitHub", icon: faGit },
+      { name: "Trello", icon: "trello-icon" },
+      { name: "Vercel", icon: "vercel-icon" },
+    ],
+  },
+];
+
 const Principal = () => {
   return (
-    <div className="position-relative">
-      <section className="position-absolute top-0 start-0 w-100">
+    <>
+      <section className="d-flex position-relative overflow-hidden">
         <img
           src={banner}
-          className="w-100 bannerPrincipal position-relative z-n1"
-          alt="banner"
+          alt="banner Principal"
+          className="img-fluid bannerPrincipal w-100 position-absolute"
         />
+        <Container className="position-relative d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-around">
+          <img
+            src={banneranime}
+            className="img-fluid logoBanner mb-4 mb-md-0"
+            alt="Imagen de anime"
+          />
+          <div className="text-light text-lg-center text-md-start ms-md-5 bienvenida">
+            <h1>Bienvenidos, soy Sheyla Astorga</h1>
+            <h2>Desarrolladora Web</h2>
+            <p className="lead mt-lg-5">
+              Explorá mi trabajo y descubre cómo combino pasión y creatividad
+              para construir experiencias web únicas y cautivadoras.
+            </p>
+          </div>
+        </Container>
       </section>
-      <section className="w-100 position-relative z-index-1 text-light d-flex ">
-        <div>
-          <img src={logo} alt="perfil" className="perfilLogo" />
+      <Container>
+        <h1 className="mt-5 misProyectos mb-5 text-center">
+          <i className="bi bi-laptop"> </i>Mis proyectos
+        </h1>
+        <section>
+          <Row className="mt-4">
+            <Col xs={12} md={6} lg={4} className="mb-5">
+              <Card bg="dark" text="light" className="cardPagina">
+                <a href="https://sazondelalma-restaurant73i.netlify.app/">
+                  <Card.Img variant="top" src={sazon} className="imagenCard" />
+                </a>
+                <Card.Body className="text-center ">
+                  <Card.Title className="fs-4">Sazón del Alma</Card.Title>
+                  <Card.Text>Restaurante</Card.Text>
+                  <section className="d-flex align-items-center justify-content-center">
+                    <FontAwesomeIcon
+                      icon={faHtml5}
+                      style={{ color: "#ff622e" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faCss3Alt}
+                      style={{ color: "#2278b9" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faJs}
+                      style={{ color: "#f8cc30" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faReact}
+                      style={{ color: "#30a1f8" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <img src={mongodb} alt="mongoDB" className="iconoMongo" />
+                  </section>
+                  <a
+                    href="https://sazondelalma-restaurant73i.netlify.app/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="light"
+                      className="border border-black mt-md-3 botonVer"
+                    >
+                      ver
+                    </Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} lg={4} className="mb-4">
+              <Card bg="dark" text="light" className="cardPagina">
+                <a href="https://ritmoweb.netlify.app/">
+                  <Card.Img
+                    variant="top"
+                    src={ritmoweb}
+                    className="imagenCard"
+                  />
+                </a>
+                <Card.Body className="text-center">
+                  <Card.Title className="fs-4">Ritmo Web</Card.Title>
+                  <Card.Text>Descripción del proyecto 2.</Card.Text>
+                  <section>
+                    <FontAwesomeIcon
+                      icon={faHtml5}
+                      style={{ color: "#ff622e" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faCss3Alt}
+                      style={{ color: "#2278b9" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faJs}
+                      style={{ color: "#f8cc30" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                  </section>
+                  <a
+                    href="https://ritmoweb.netlify.app/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="light"
+                      className="border border-black mt-md-3 botonVer"
+                    >
+                      ver
+                    </Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} lg={4} className="mb-4 mx-auto">
+              <Card bg="dark" text="light" className="cardPagina">
+                <a href="https://donapirolarecetas.netlify.app/">
+                  <Card.Img
+                    variant="top"
+                    src={donapirola}
+                    className="imagenCard"
+                  />
+                </a>
+                <Card.Body className="text-center">
+                  <Card.Title className="fs-4">Doña Pirola</Card.Title>
+                  <Card.Text>Descripción del proyecto 3.</Card.Text>
+                  <section>
+                    <FontAwesomeIcon
+                      icon={faHtml5}
+                      style={{ color: "#ff622e" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faCss3Alt}
+                      style={{ color: "#2278b9" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faJs}
+                      style={{ color: "#f8cc30" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faReact}
+                      style={{ color: "#30a1f8" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                  </section>
+                  <a
+                    href="https://donapirolarecetas.netlify.app/"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="light"
+                      className="border border-black mt-md-3 botonVer"
+                    >
+                      ver
+                    </Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </section>
+      </Container>
+      <Container>
+        <div className="skills">
+          <h2>Habilidades y Tecnologías</h2>
+          <p>Estas son las tecnologías y herramientas con las que trabajo:</p>
+          <div className="skills-container">
+            {skillsData.map((category, index) => (
+              <div key={index} className="skills-category">
+                <h3>{category.category}</h3>
+                <div className="skills-list">
+                  {category.skills.map((skill, idx) => (
+                    <div key={idx} className="skill-item">
+                      <FontAwesomeIcon icon={skill.icon} size="2x" />
+                      <span>{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="textoBienvenida align-content-center w-75 p-5">
-          <h1 className="text-center mb-5">
-            👩🏻‍💻​¡Hola , Bienvenidos a mi portfolio!👩🏻‍💻​
-          </h1>
-          <h4 className="text-center">
-            Soy Sheyla Astorga, una desarrolladora web apasionada y creativa.
-          </h4>
-          <h4 className="text-center">
-            Aquí podrás echar un vistazo a mi trabajo y ver mi dedicación a la
-            creación de experiencias digitales increíbles.
-          </h4>
-        </div>
-      </section>
-    </div>
+      </Container>
+    </>
   );
 };
 
