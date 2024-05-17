@@ -92,6 +92,7 @@ body{
 .skills {
   text-align: center;
   padding: 50px 20px;
+  
  
 }
 
@@ -100,6 +101,9 @@ body{
   text-shadow: 2px 2px 4px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
 }
 
+.skills p {
+  font-size: 18px;
+}
 .skills-container {
   display: flex;
   justify-content: center;
@@ -109,11 +113,15 @@ body{
 .skills-category {
   margin: 20px;
   width: 200px;
+  
 }
 
 .skills-category h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
+  color: #4e139b;
+  
+
 
 }
 

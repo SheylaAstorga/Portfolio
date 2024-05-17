@@ -27,41 +27,41 @@ const skillsData = [
   {
     category: "Frontend",
     skills: [
-      { name: "HTML", icon: faHtml5 , } ,
-      { name: "CSS", icon: faCss3Alt },
-      { name: "JavaScript", icon: faJs },
-      { name: "React", icon: faReact },
-      { name: "Bootstrap", icon: "bootstrap-icon" },
-      { name: "React Bootstrap", icon: "react-bootstrap-icon" },
+      { name: "HTML"} ,
+      { name: "CSS"},
+      { name: "JavaScript" },
+      { name: "React"},
+      { name: "Bootstrap" },
+      { name: "React Bootstrap"},
     ],
   },
   {
     category: "Backend",
     skills: [
-      { name: "Node.js", icon: faNodeJs },
-      { name: "Express", icon: "express-icon" },
+      { name: "Node.js"},
+      { name: "Express" },
     ],
   },
   {
     category: "Bases de Datos",
     skills: [
-      { name: "MongoDB", icon: "mongodb-icon" },
-      { name: "Mongoose", icon: "mongoose-icon" },
+      { name: "MongoDB" },
+      { name: "Mongoose" },
     ],
   },
   {
     category: "Autenticación y Seguridad",
     skills: [
-      { name: "JWT", icon: "jwt-icon" },
-      { name: "bcrypt", icon: "bcrypt-icon" },
+      { name: "JWT"},
+      { name: "bcrypt"},
     ],
   },
   {
     category: "Herramientas",
     skills: [
-      { name: "GitHub", icon: faGit },
-      { name: "Trello", icon: "trello-icon" },
-      { name: "Vercel", icon: "vercel-icon" },
+      { name: "GitHub" },
+      { name: "Trello" },
+      { name: "Vercel" },
     ],
   },
 ];
@@ -258,7 +258,6 @@ const Principal = () => {
                 <div className="skills-list">
                   {category.skills.map((skill, idx) => (
                     <div key={idx} className="skill-item">
-                      <FontAwesomeIcon icon={skill.icon} size="2x" />
                       <span>{skill.name}</span>
                     </div>
                   ))}
