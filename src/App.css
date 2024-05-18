@@ -95,10 +95,11 @@ body{
 
 .skills {
   text-align: center;
-  padding: 50px 20px;
+  /* padding: 50px 20px; */
   background: linear-gradient(135deg, #8e4cab, #514196); 
   color: #fff; 
   filter: saturate(130%);
+  padding: 2em;
  
 }
 
@@ -116,6 +117,7 @@ body{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 1em;
   
 }
 
@@ -222,10 +224,11 @@ body{
 .contact textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+
 }
 
-.contact button {
+.contact Button {
+
   padding: 10px 20px;
   background-color: #000000;
   color: #fff;
@@ -235,13 +238,19 @@ body{
   transition: background-color 0.3s;
 }
 
-.contact button:hover {
+.contact Button:hover {
   background-color: #260c41;
 }
 
+a{
+  text-decoration: none;
+  color: #23063f;
+  text-shadow: 2px 2px 4px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
+}
 
-
-
+a:hover{
+ color: #0e011b;
+}
 
 
 

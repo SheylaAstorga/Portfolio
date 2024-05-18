@@ -230,7 +230,7 @@ const Principal = () => {
         <div className="skills">
           <h2>Habilidades y Tecnologías</h2>
           <p>Estas son las tecnologías y herramientas con las que trabajo:</p>
-          <div className="skills-container">
+          <div className="skills-container mt-5">
             {skillsData.map((category, index) => (
               <div key={index} className="skills-category">
                 <h3>{category.category}</h3>
@@ -247,7 +247,7 @@ const Principal = () => {
         </div>
       </section>
       <Container>
-        <section className="sobreMi my-3">
+        <section className="sobreMi">
           <div className="sobreMi-container">
             <div className="sobreMi-imagen mb-4">
               <img src={logoPerfil} alt="Perfil" />
