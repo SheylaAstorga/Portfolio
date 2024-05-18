@@ -1,20 +1,10 @@
-import {
-  Card,
-  Container,
-  Button,
-  Carousel,
-  Modal,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Card, Container, Button, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
   faCss3Alt,
   faJs,
   faReact,
-  faGit,
-  faNodeJs,
 } from "@fortawesome/free-brands-svg-icons";
 import banner from "../../assets/banner.png";
 import sazon from "../../assets/sazondelalma.png";
@@ -22,59 +12,48 @@ import ritmoweb from "../../assets/ritmoWeb.png";
 import donapirola from "../../assets/donapirola.png";
 import mongodb from "../../assets/mongodb.png";
 import banneranime from "../../assets/bannerPort.png";
+import logoPerfil from "../../assets/logoPerfil.png";
+import Contacto from "./Contacto";
 
 const skillsData = [
   {
     category: "Frontend",
     skills: [
-      { name: "HTML"} ,
-      { name: "CSS"},
+      { name: "HTML" },
+      { name: "CSS" },
       { name: "JavaScript" },
-      { name: "React"},
+      { name: "React" },
       { name: "Bootstrap" },
-      { name: "React Bootstrap"},
+      { name: "React Bootstrap" },
     ],
   },
   {
     category: "Backend",
-    skills: [
-      { name: "Node.js"},
-      { name: "Express" },
-    ],
+    skills: [{ name: "Node.js" }, { name: "Express" }],
   },
   {
     category: "Bases de Datos",
-    skills: [
-      { name: "MongoDB" },
-      { name: "Mongoose" },
-    ],
+    skills: [{ name: "MongoDB" }, { name: "Mongoose" }],
   },
   {
     category: "Autenticación y Seguridad",
-    skills: [
-      { name: "JWT"},
-      { name: "bcrypt"},
-    ],
+    skills: [{ name: "JWT" }, { name: "bcrypt" }],
   },
   {
     category: "Herramientas",
-    skills: [
-      { name: "GitHub" },
-      { name: "Trello" },
-      { name: "Vercel" },
-    ],
+    skills: [{ name: "GitHub" }, { name: "Trello" }, { name: "Vercel" }],
   },
 ];
 
 const Principal = () => {
   return (
     <>
-      <section className="d-flex position-relative overflow-hidden">
-        <img
+      <section className="d-flex position-relative overflow-hidden contenedorBienvenida">
+        {/* <img
           src={banner}
           alt="banner Principal"
           className="img-fluid bannerPrincipal w-100 position-absolute"
-        />
+        /> */}
         <Container className="position-relative d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-around">
           <img
             src={banneranime}
@@ -91,7 +70,7 @@ const Principal = () => {
           </div>
         </Container>
       </section>
-      <Container>
+      <Container className="my-5">
         <h1 className="mt-5 misProyectos mb-5 text-center">
           <i className="bi bi-laptop"> </i>Mis proyectos
         </h1>
@@ -247,7 +226,7 @@ const Principal = () => {
           </Row>
         </section>
       </Container>
-      <Container>
+      <section>
         <div className="skills">
           <h2>Habilidades y Tecnologías</h2>
           <p>Estas son las tecnologías y herramientas con las que trabajo:</p>
@@ -266,7 +245,35 @@ const Principal = () => {
             ))}
           </div>
         </div>
+      </section>
+      <Container>
+        <section className="sobreMi my-3">
+          <div className="sobreMi-container">
+            <div className="sobreMi-imagen mb-4">
+              <img src={logoPerfil} alt="Perfil" />
+            </div>
+            <div className="sobreMi-contenido">
+              <h2>Sobre mí</h2>
+              <p>
+                ¡Hola! Soy Sheyla Luciana Astorga, una desarrolladora web
+                apasionada por crear aplicaciones web modernas y eficientes.
+                Tengo experiencia en frontend y backend, y disfruto trabajando
+                con tecnologías como React, Node.js y MongoDB.
+              </p>
+              <p>
+                Me encanta aprender cosas nuevas y enfrentar desafíos. Cuando no
+                estoy programando, me gusta tomar clases de danza , jugar video
+                juegos,y hacer gimnacia. Estoy emocionada por las oportunidades
+                que el desarrollo web ofrece y siempre estoy buscando colaborar
+                en proyectos interesantes.
+              </p>
+            </div>
+          </div>
+        </section>
       </Container>
+      <section className="contenedorContacto">
+        <Contacto></Contacto>
+      </section>
     </>
   );
 };

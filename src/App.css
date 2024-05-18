@@ -10,15 +10,20 @@ body{
 
 }
 
-.miLogo{
+/* .miLogo{
   width: 2em;
-}
+} */
 
 .NavLink:hover {
   color: rgb(223, 212, 229);
   text-shadow: 0 0 5px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
 }
 
+.contenedorBienvenida{
+  background: linear-gradient(135deg, #8e44ad, #341f97);
+  color: #fff; 
+  filter: saturate(130%);
+}
 
 
 
@@ -26,11 +31,11 @@ body{
  color: rgb(110, 15, 198);
 }
 
-.bannerPrincipal {
+/* .bannerPrincipal {
   max-width: 100%;
   height: 64vh;
   filter: brightness(70%);
-}
+} */
 
 .misProyectos{
   color: #24044e;
@@ -45,7 +50,6 @@ body{
 }
 .iconoMongo{
   width: 19px;
-  /* margin-bottom: 1em; */
 }
 
 
@@ -92,22 +96,27 @@ body{
 .skills {
   text-align: center;
   padding: 50px 20px;
-  
+  background: linear-gradient(135deg, #8e4cab, #514196); 
+  color: #fff; 
+  filter: saturate(130%);
  
 }
 
 .skills h2{
-  color: #24044e;
+  color: #ffffff;
+  margin-bottom: 1em;
   text-shadow: 2px 2px 4px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
 }
 
 .skills p {
   font-size: 18px;
+  
 }
 .skills-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 .skills-category {
@@ -119,10 +128,7 @@ body{
 .skills-category h3 {
   font-size: 1.5em;
   margin-bottom: 15px;
-  color: #4e139b;
   
-
-
 }
 
 .skills-list {
@@ -149,7 +155,89 @@ body{
 }
 
 
+.sobreMi {
+  padding: 50px 20px;
+  text-align: center;
 
+}
+
+.sobreMi-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobreMi-imagen img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.sobreMi-contenido {
+  text-align: left;
+}
+
+.sobreMi-contenido h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.sobreMi-contenido p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contenedorContacto{
+  background: linear-gradient(135deg, #8e4cab, #514196); 
+  color: #fff; 
+  filter: saturate(130%);
+}
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact button:hover {
+  background-color: #260c41;
+}
 
 
 
@@ -193,6 +281,25 @@ body{
     margin:0 auto;
     margin-top: 1em;
     display: inline;
+  }
+  .sobreMi-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  /* .SobreMi-imagen {
+    flex: 1;
+    margin-right: 20px;
+  } */
+
+  .sobreMi-imagen img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2em;
+  }
+
+  .sobreMi-contenido {
+    flex: 2;
   }
   
 
