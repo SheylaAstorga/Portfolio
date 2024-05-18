@@ -7,10 +7,12 @@ const Contacto = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+    reset();
   };
 
   return (
