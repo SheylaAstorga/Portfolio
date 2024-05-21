@@ -30,6 +30,10 @@ const Contacto = () => {
           placeholder="Nombre"
           {...register("nombre", {
             required: "Tu nombre es obligatorio",
+            pattern: {
+              value: /^[A-Za-z]+$/,
+              message: 'El nombre de usuario solo puede contener letras '
+            },
             minLength: {
               value: 3,
               message: "Tu nombre debe tener como mínimo 3 caracteres",

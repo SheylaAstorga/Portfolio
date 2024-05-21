@@ -6,16 +6,19 @@
 body{
   background-color: #f9fafd;
   background-image: linear-gradient(100deg, #f9fafd 0%, #dcd0fb 100%);
-  
+  display: flex;
+  flex-direction: column;
 
 }
 
-/* .miLogo{
-  width: 2em;
-} */
+.pagPrinc{
+  flex-grow: 1;
+}
+
+
 
 .NavLink:hover {
-  color: rgb(223, 212, 229);
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 5px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
 }
 
@@ -31,11 +34,7 @@ body{
  color: rgb(110, 15, 198);
 }
 
-/* .bannerPrincipal {
-  max-width: 100%;
-  height: 64vh;
-  filter: brightness(70%);
-} */
+
 
 .misProyectos{
   color: #24044e;
@@ -95,7 +94,6 @@ body{
 
 .skills {
   text-align: center;
-  /* padding: 50px 20px; */
   background: linear-gradient(135deg, #8e4cab, #514196); 
   color: #fff; 
   filter: saturate(130%);
@@ -252,10 +250,21 @@ a:hover{
  color: #0e011b;
 }
 
-
-
-
-
+.highlight {
+  color: #754cde;
+  font-weight: bold;
+}
+.hobbies, .education {
+  list-style: none;
+  padding: 0;
+}
+.hobbies li, .education li {
+  margin: 10px 0;
+}
+.hobbies li i, .education li i {
+  color: #754cde;
+  margin-right: 10px;
+}
 
 
 
@@ -272,7 +281,7 @@ a:hover{
 
   .bienvenida h1 {
     font-size: 20px ;
-    padding: 1em;
+    padding: 0.5em;
     text-align: center;
     margin-bottom: 0;
     margin-top: 1em;
@@ -295,12 +304,6 @@ a:hover{
     flex-direction: column;
     text-align: left;
   }
-
-  /* .SobreMi-imagen {
-    flex: 1;
-    margin-right: 20px;
-  } */
-
   .sobreMi-imagen img {
     width: 200px;
     height: 200px;
@@ -313,3 +316,9 @@ a:hover{
   
 
 }
+
+/* @media all and (min-width: 700px) and (max-width: 1190px) {
+  .imagenCard{
+    height: 18vh;
+  }
+} */

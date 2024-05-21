@@ -14,6 +14,7 @@ import mongodb from "../../assets/mongodb.png";
 import banneranime from "../../assets/bannerPort.png";
 import logoPerfil from "../../assets/logoPerfil.png";
 import Contacto from "./Contacto";
+import Footer from "../common/Footer";
 
 const skillsData = [
   {
@@ -47,21 +48,17 @@ const skillsData = [
 
 const Principal = () => {
   return (
-    <>
+    <div className="pagPrinc">
       <section className="d-flex position-relative overflow-hidden contenedorBienvenida">
-        {/* <img
-          src={banner}
-          alt="banner Principal"
-          className="img-fluid bannerPrincipal w-100 position-absolute"
-        /> */}
         <Container className="position-relative d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-around">
           <img
             src={banneranime}
-            className="img-fluid logoBanner mb-4 mb-md-0"
+            className="img-fluid logoBanner  mb-md-0"
             alt="Imagen de anime"
           />
           <div className="text-light text-lg-center text-md-start ms-md-5 bienvenida">
-            <h1>Bienvenidos, soy Sheyla Astorga</h1>
+            <h1>"¡Bienvenidos a mi mundo digital!</h1>
+            <h6 className="text-center mt-2">Soy Sheyla Astorga</h6>
             <h2>Desarrolladora Web</h2>
             <p className="lead mt-lg-5">
               Explorá mi trabajo y descubre cómo combino pasión y creatividad
@@ -79,7 +76,11 @@ const Principal = () => {
             <Col xs={12} md={6} lg={4} className="mb-5">
               <Card bg="dark" text="light" className="cardPagina">
                 <a href="https://sazondelalma-restaurant73i.netlify.app/">
-                  <Card.Img variant="top" src={sazon} className="imagenCard" />
+                  <Card.Img
+                    variant="top"
+                    src={sazon}
+                    className="imagenCard img-fluid"
+                  />
                 </a>
                 <Card.Body className="text-center ">
                   <Card.Title className="fs-4">Sazón del Alma</Card.Title>
@@ -254,18 +255,34 @@ const Principal = () => {
             </div>
             <div className="sobreMi-contenido">
               <h2>Sobre mí</h2>
-              <p>
-                ¡Hola! Soy Sheyla Luciana Astorga, una desarrolladora web
-                apasionada por crear aplicaciones web modernas y eficientes.
-                Tengo experiencia en frontend y backend, y disfruto trabajando
-                con tecnologías como React, Node.js y MongoDB.
+              <p className="intro">
+                ¡Hola! Soy <span className="highlight">Sheyla Luciana Astorga</span>
+                , una desarrolladora web apasionada por crear aplicaciones web
+                modernas y eficientes.
               </p>
+              <ul className="education">
+                <li>
+                  <i className="fas fa-graduation-cap"></i> Egresada de RollingCode
+                  School
+                </li>
+              </ul>
               <p>
                 Me encanta aprender cosas nuevas y enfrentar desafíos. Cuando no
-                estoy programando, me gusta tomar clases de danza , jugar video
-                juegos,y hacer gimnacia. Estoy emocionada por las oportunidades
-                que el desarrollo web ofrece y siempre estoy buscando colaborar
-                en proyectos interesantes.
+                estoy programando, me gusta:
+              </p>
+              <ul className="hobbies">
+                <li>Tomar clases de danza</li>
+                <li>
+                  <i className="fas fa-gamepad"></i> Jugar video juegos
+                </li>
+                <li>
+                  <i className="fas fa-dumbbell"></i> Hacer gimnasia
+                </li>
+              </ul>
+              <p>
+                Estoy emocionada por las oportunidades que el desarrollo web
+                ofrece y siempre estoy buscando colaborar en proyectos
+                interesantes.
               </p>
             </div>
           </div>
@@ -274,7 +291,10 @@ const Principal = () => {
       <section className="contenedorContacto">
         <Contacto></Contacto>
       </section>
-    </>
+      <section className="p-4 text-center bg-dark text-light">
+        <Footer></Footer>
+      </section>
+    </div>
   );
 };
 
