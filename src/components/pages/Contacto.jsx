@@ -9,37 +9,38 @@ const Contacto = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
     reset();
   };
-  const contactForm = async (mail) => {
+
+  const contactForm = async (data) => {
     try {
-      const response = await enviarMail(mail)
-      if (response.status === 200){
+      const response = await enviarMail(data); // Enviamos los datos correctos
+      if (response.status === 200) {
         Swal.fire({
           position: "center",
           icon: "success",
           title: "El correo fue enviado correctamente.",
           showConfirmButton: true,
         });
-        reset()
+        reset();
       } else {
         Swal.fire({
           position: "center",
           icon: "error",
-          title:`Hubo un problema al enviar el correo. Por favor, inténtalo mas tarde`,
+          title:
+            "Hubo un problema al enviar el correo. Por favor, inténtalo más tarde.",
           showConfirmButton: true,
         });
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
-
+  };
   return (
     <Container className="contact">
       <h2>Contacto</h2>
@@ -50,6 +51,7 @@ const Contacto = () => {
         <input
           type="text"
           name="nombre"
+          id="nombre"
           minLength={3}
           maxLength={30}
           placeholder="Nombre"
@@ -65,13 +67,13 @@ const Contacto = () => {
             },
             pattern: {
               value: /^[a-zA-ZÁÉÍÓÚáéíóúÜü\s]+$/,
-              message: "Por favor, ingresa un nombre válido."
-            }
+              message: "Por favor, ingresa un nombre válido.",
+            },
           })}
-          />
-          <Form.Text  className="mb-4 text-light">
-         {errors.nombre?.message}
-          </Form.Text>
+        />
+        <Form.Text className="mb-4 text-light">
+          {errors.nombre?.message}
+        </Form.Text>
         <input
           type="email"
           name="email"
@@ -87,30 +89,29 @@ const Contacto = () => {
               message: "Tu correo debe tener como máximo 150 caracteres",
             },
             pattern: {
-              value:/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-              message: "Por favor, ingresa un mail válido"
-            }
+              value: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+              message: "Por favor, ingresa un mail válido",
+            },
           })}
         />
-        <FormText className="mb-4 text-light">
-       {errors.email?.message}
-        </FormText>
+        <FormText className="mb-4 text-light">{errors.email?.message}</FormText>
         <textarea
           name="message"
           placeholder="Mensaje"
-          {...register("message", { required: "El mensaje es obligatorio",
-          minLength: {
-            value: 16,
-            message: "El mensaje debe tener como mínimo 16 caracteres",
-          },
-          maxLength: {
-            value: 400,
-            message: "El mensaje debe tener como máximo 400 caracteres",
-          },
-           })}
+          {...register("message", {
+            required: "El mensaje es obligatorio",
+            minLength: {
+              value: 16,
+              message: "El mensaje debe tener como mínimo 16 caracteres",
+            },
+            maxLength: {
+              value: 400,
+              message: "El mensaje debe tener como máximo 400 caracteres",
+            },
+          })}
         ></textarea>
         <FormText className="mb-4 text-light">
-        {errors.message?.message}
+          {errors.message?.message}
         </FormText>
         <Button variant="dark" type="submit">
           Enviar
