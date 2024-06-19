@@ -15,9 +15,11 @@ body{
   flex-grow: 1;
 }
 
+.Nav-link{
+  color:#d09ee6;
+}
 
-
-.NavLink:hover {
+.Nav-link:hover {
   color: rgb(255, 255, 255);
   text-shadow: 0 0 5px rgb(95, 26, 133), 0 0 10px rgb(95, 26, 133), 0 0 15px rgb(95, 26, 133);
 }
@@ -266,6 +268,37 @@ a:hover{
   margin-right: 10px;
 }
 
+#contenedorError {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-top: 3em;
+  margin-bottom: 10em;
+  text-align: center;
+}
+
+#contenedorError img {
+  padding: 3em;
+  max-height: 500px;
+}
+
+
+
+.btn-dark:hover{
+  background-color: #641cb0;
+}
+.btn-dark {
+  width: 140px;
+ font-size: 20px;
+  height: 45px;
+  background-color: #23063f;
+  border-color: #754cde;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
 
 
