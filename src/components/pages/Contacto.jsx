@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container, Form, FormText } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { enviarMail } from "../../helpers/queries.js";
+import Swal from "sweetalert2";
 
 const Contacto = () => {
   const {
