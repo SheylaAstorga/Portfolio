@@ -12,10 +12,10 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto d-flex align-items-center">
-              <Nav.Link  className="NavLink" href="#home">Proyectos</Nav.Link>
-              <Nav.Link  className="NavLink" href="#link">Tecnologías</Nav.Link>
-              <Nav.Link className="NavLink" href="#link">Sobre mí</Nav.Link>
-              <Nav.Link className="NavLink" href="#link">Contacto</Nav.Link>
+              <Nav.Link  className="NavLink" href="/Proyectos">Proyectos</Nav.Link>
+              <Nav.Link  className="NavLink" href="#tecnologías">Tecnologías</Nav.Link>
+              <Nav.Link className="NavLink" href="#sobremi">Sobre mí</Nav.Link>
+              <Nav.Link className="NavLink" href="#contacto">Contacto</Nav.Link>
 
               <span className="navbar-text ">
                 <div className="social-icon ">

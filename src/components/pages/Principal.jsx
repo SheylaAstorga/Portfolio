@@ -68,14 +68,22 @@ const Principal = () => {
         </Container>
       </section>
       <Container className="my-5">
-        <h1 className="mt-5 misProyectos mb-5 text-center">
-          <i className="bi bi-laptop"> </i>Mis proyectos
-        </h1>
+        <div className="d-flex flex-lg-wrap justify-content-between">
+          <h1 className="mt-5 misProyectos ">
+            <i className="bi bi-laptop"> </i>Mis proyectos
+          </h1>
+          <a className="align-content-end mb-3" href="#Proyectos">
+            Ver más..
+          </a>
+        </div>
         <section>
           <Row className="mt-4">
             <Col xs={12} md={6} lg={4} className="mb-5">
               <Card bg="dark" text="light" className="cardPagina">
-                <a href="https://sazondelalma-restaurant73i.netlify.app/">
+                <a
+                  href="https://sazondelalma-restaurant73i.netlify.app/"
+                  target="_blank"
+                >
                   <Card.Img
                     variant="top"
                     src={sazon}
@@ -114,6 +122,7 @@ const Principal = () => {
                   </section>
                   <a
                     href="https://sazondelalma-restaurant73i.netlify.app/"
+                    target="_blank"
                     style={{ textDecoration: "none" }}
                   >
                     <Button
@@ -128,7 +137,7 @@ const Principal = () => {
             </Col>
             <Col xs={12} md={6} lg={4} className="mb-4">
               <Card bg="dark" text="light" className="cardPagina">
-                <a href="https://ritmoweb.netlify.app/">
+                <a href="https://ritmoweb.netlify.app/" target="_blank">
                   <Card.Img
                     variant="top"
                     src={ritmoweb}
@@ -161,6 +170,7 @@ const Principal = () => {
                   <a
                     href="https://ritmoweb.netlify.app/"
                     style={{ textDecoration: "none" }}
+                    target="_blank"
                   >
                     <Button
                       variant="light"
@@ -174,7 +184,7 @@ const Principal = () => {
             </Col>
             <Col xs={12} md={6} lg={4} className="mb-4 mx-auto">
               <Card bg="dark" text="light" className="cardPagina">
-                <a href="https://donapirolarecetas.netlify.app/">
+                <a href="https://donapirolarecetas.netlify.app/" target="_blank">
                   <Card.Img
                     variant="top"
                     src={donapirola}
@@ -212,6 +222,7 @@ const Principal = () => {
                   </section>
                   <a
                     href="https://donapirolarecetas.netlify.app/"
+                    target="_blank"
                     style={{ textDecoration: "none" }}
                   >
                     <Button
@@ -227,7 +238,7 @@ const Principal = () => {
           </Row>
         </section>
       </Container>
-      <section>
+      <section id="tecnologías">
         <div className="skills">
           <h2>Habilidades y Tecnologías</h2>
           <p>Estas son las tecnologías y herramientas con las que trabajo:</p>
@@ -248,7 +259,7 @@ const Principal = () => {
         </div>
       </section>
       <Container>
-        <section className="sobreMi">
+        <section className="sobreMi" id="sobremi">
           <div className="sobreMi-container">
             <div className="sobreMi-imagen mb-4">
               <img src={logoPerfil} alt="Perfil" />
@@ -256,14 +267,15 @@ const Principal = () => {
             <div className="sobreMi-contenido">
               <h2>Sobre mí</h2>
               <p className="intro">
-                ¡Hola! Soy <span className="highlight">Sheyla Luciana Astorga</span>
-                , una desarrolladora web apasionada por crear aplicaciones web
+                ¡Hola! Soy{" "}
+                <span className="highlight">Sheyla Luciana Astorga</span>, una
+                desarrolladora web apasionada por crear aplicaciones web
                 modernas y eficientes.
               </p>
               <ul className="education">
                 <li>
-                  <i className="fas fa-graduation-cap"></i> Egresada de RollingCode
-                  School
+                  <i className="fas fa-graduation-cap"></i> Egresada de
+                  RollingCode School
                 </li>
               </ul>
               <p>
@@ -288,11 +300,8 @@ const Principal = () => {
           </div>
         </section>
       </Container>
-      <section className="contenedorContacto">
+      <section className="contenedorContacto" id="contacto">
         <Contacto></Contacto>
-      </section>
-      <section className="p-4 text-center bg-dark text-light">
-        <Footer></Footer>
       </section>
     </div>
   );

@@ -87,12 +87,6 @@ const Contacto = () => {
           Enviar
         </Button>
       </Form>
-      <p className="mt-4">
-        También puedes enviarme un correo electrónico a: {" "}
-        <a href="mailto:sheylaastorga1998@gmail.com">
-          sheylaastorga1998@gmail.com
-        </a>
-      </p>
     </Container>
   );
 };
