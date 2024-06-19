@@ -19,7 +19,7 @@ const Contacto = () => {
 
   const contactForm = async (data) => {
     try {
-      const response = await enviarMail(data); // Enviamos los datos correctos
+      const response = await enviarMail(data);
       if (response.status === 200) {
         Swal.fire({
           position: "center",

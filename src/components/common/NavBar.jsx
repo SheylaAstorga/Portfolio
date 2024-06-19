@@ -19,26 +19,19 @@ const NavBar = () => {
               <NavLink className="Nav-link mx-2" to="/proyectos">
                 Proyectos
               </NavLink>
-              <NavLink className="Nav-link mx-2" href="#tecnologías">
-                Tecnologías
-              </NavLink>
-              <NavLink className="Nav-link mx-2" href="#sobremi">
-                Sobre mí
-              </NavLink>
-              <NavLink className="Nav-link" href="#contacto">
-                Contacto
-              </NavLink>
 
               <span className="navbar-text ">
                 <div className="social-icon ">
                   <a
                     className="NavLink"
                     href="https://github.com/SheylaAstorga"
+                    target="_blank"
                   >
                     <i className="bi bi-github logo-git fs-4 me-3 ms-3"></i>
                   </a>
                   <a
                     className="NavLink"
+                    target="_blank"
                     href="https://www.linkedin.com/in/sheyla-luciana-astorga-40013a248/"
                   >
                     <i className="bi bi-linkedin logo-link fs-4"></i>
