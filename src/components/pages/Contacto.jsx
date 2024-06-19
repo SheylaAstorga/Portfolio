@@ -14,6 +14,29 @@ const Contacto = () => {
     console.log(data);
     reset();
   };
+  const contactForm = async (mail) => {
+    try {
+      const response = await enviarMail(mail)
+      if (response.status === 200){
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "El correo fue enviado correctamente.",
+          showConfirmButton: true,
+        });
+        reset()
+      } else {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title:`Hubo un problema al enviar el correo. Por favor, inténtalo mas tarde`,
+          showConfirmButton: true,
+        });
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <Container className="contact">
@@ -21,7 +44,7 @@ const Contacto = () => {
       <p>
         ¡Contáctame para colaboraciones, preguntas o simplemente para saludar!
       </p>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(contactForm)}>
         <input
           type="text"
           name="nombre"
@@ -42,6 +65,10 @@ const Contacto = () => {
               value: 30,
               message: "Tu nombre debe tener como máximo 50 caracteres",
             },
+            pattern: {
+              value: /^[a-zA-ZÁÉÍÓÚáéíóúÜü\s]+$/,
+              message: "Por favor, ingresa un nombre válido."
+            }
           })}
           />
           <Form.Text  className="mb-4 text-light">
@@ -61,6 +88,10 @@ const Contacto = () => {
               value: 150,
               message: "Tu correo debe tener como máximo 150 caracteres",
             },
+            pattern: {
+              value:/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+              message: "Por favor, ingresa un mail válido"
+            }
           })}
         />
         <FormText className="mb-4 text-light">
