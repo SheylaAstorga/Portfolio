@@ -28,7 +28,7 @@ const Proyectos = () => {
           <Col xs={12} md={6} lg={4} className="mb-5">
             <Card bg="dark" text="light" className="cardPagina">
               <a
-                href="https://sportivoindumentaria.netlify.app/"
+                href="https://3dprintfilament.netlify.app/"
                 target="_blank"
               >
                 <Card.Img
@@ -38,7 +38,7 @@ const Proyectos = () => {
                 />
               </a>
               <Card.Body className="text-center ">
-                <Card.Title className="fs-4">Sportivo</Card.Title>
+                <Card.Title className="fs-4">3D Print</Card.Title>
                 <Card.Text>e-commerce</Card.Text>
                 <section className="d-flex align-items-center justify-content-center">
                   <FontAwesomeIcon
@@ -57,7 +57,7 @@ const Proyectos = () => {
                     className="me-3" />
                 </section>
                 <a
-                  href="https://sportivoindumentaria.netlify.app/"
+                  href="https://3dprintfilament.netlify.app/"
                   target="_blank"
                   style={{ textDecoration: "none" }}
                 >
