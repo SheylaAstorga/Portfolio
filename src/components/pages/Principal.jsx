@@ -15,6 +15,7 @@ import banneranime from "../../assets/bannerPort.png";
 import logoPerfil from "../../assets/logoPerfil.png";
 import Contacto from "./Contacto";
 import Footer from "../common/Footer";
+import { Link } from "react-router-dom";
 
 const skillsData = [
   {
@@ -72,9 +73,9 @@ const Principal = () => {
           <h1 className="mt-5 misProyectos ">
             <i className="bi bi-laptop"> </i>Mis proyectos
           </h1>
-          <a className="align-content-end mb-3" href="#Proyectos">
+          <Link className="align-content-end mb-3" to="/proyectos">
             Ver más..
-          </a>
+          </Link>
         </div>
         <section>
           <Row className="mt-4">

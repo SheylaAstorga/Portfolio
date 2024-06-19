@@ -25,9 +25,9 @@ const NavBar = () => {
               <NavLink className="Nav-link mx-2" href="#sobremi">
                 Sobre mí
               </NavLink>
-              <Nav.Link className="Nav-link" href="#contacto">
+              <NavLink className="Nav-link" href="#contacto">
                 Contacto
-              </Nav.Link>
+              </NavLink>
 
               <span className="navbar-text ">
                 <div className="social-icon ">
