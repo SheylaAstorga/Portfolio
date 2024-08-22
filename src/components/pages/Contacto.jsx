@@ -42,7 +42,7 @@ const Contacto = () => {
     }
   };
   return (
-    <Container className="text-light text-center fs-5 mb-5 p-5 ">
+    <Container className="text-light text-center fs-5 mb-5 p-lg-4 p-md-4 formContacto ">
       <div className="form-card1 mt-5 ">
         <div className="form-card2">
           <Form className="form" onSubmit={handleSubmit(contactForm)}>
@@ -52,7 +52,7 @@ const Contacto = () => {
               saludar!
             </p>
 
-            <div className="form-field mb-3">
+            <div className="form-field mb-lg-3 mb-md-3">
               <input
                 type="text"
                 name="nombre"
@@ -78,7 +78,7 @@ const Contacto = () => {
                 })}
               />
             </div>
-            <Form.Text className="mb-4 text-light">
+            <Form.Text className="mb-lg-3 mb-md-3 text-light">
               {errors.nombre?.message}
             </Form.Text>
 
@@ -105,7 +105,7 @@ const Contacto = () => {
                 })}
               />
             </div>
-            <FormText className="mb-4 text-light">
+            <FormText className="mb-lg-3 mb-md-3 text-light">
               {errors.email?.message}
             </FormText>
 

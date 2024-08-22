@@ -381,6 +381,8 @@ html {
  .card__content ,h2 {
   font-size: 30px;
  }
-
+ .formContacto{
+  padding: 1em;
+ }
 
 }
