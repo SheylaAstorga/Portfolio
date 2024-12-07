@@ -477,7 +477,7 @@ const Principal = () => {
           </div>
         </div>
       </section>
-      <Container className="py-4 text-light sobreMi-container ">
+      <Container className="py-3 text-light sobreMi-container ">
         <Row>
           <Col
             xs={12}
