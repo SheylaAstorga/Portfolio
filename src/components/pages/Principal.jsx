@@ -14,11 +14,11 @@ import sportivo from "../../assets/sportivo.png";
 import Print from "../../assets/print.png";
 import apiSimpsons from "../../assets/simpsons.png";
 import apiNoticia from "../../assets/api-noticia.png";
+import estudio from "../../assets/estudio.png";
 import mongodb from "../../assets/mongodb.png";
 import MiPerfil from "../../assets/miPerfil.png";
 import Contacto from "./Contacto";
 
-import { Link } from "react-router-dom";
 
 const skillsData = [
   {
@@ -441,6 +441,51 @@ const Principal = () => {
                   </section>
                   <a
                     href="https://lossimpsons-react.netlify.app/"
+                    target="_blank"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="light"
+                      className="border border-black mt-md-3 botonVer"
+                    >
+                      ver
+                    </Button>
+                  </a>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} md={6} lg={4} className="mb-4 mx-auto">
+              <Card bg="dark" text="light" className="cardPagina">
+                <a
+                  href="https://estudiojuridicovega.netlify.app/"
+                  target="_blank"
+                >
+                  <Card.Img
+                    variant="top"
+                    src={estudio}
+                    className="imagenCard"
+                  />
+                </a>
+                <Card.Body className="text-center">
+                  <Card.Title className="fs-4">Estudio Juridico</Card.Title>
+                  <Card.Text>Estudio de Abogados</Card.Text>
+                  <section>
+                    
+                    <FontAwesomeIcon
+                      icon={faJs}
+                      style={{ color: "#f8cc30" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                    <FontAwesomeIcon
+                      icon={faReact}
+                      style={{ color: "#30a1f8" }}
+                      size="2x"
+                      className="me-3"
+                    />
+                  </section>
+                  <a
+                    href="https://donapirolarecetas.netlify.app/"
                     target="_blank"
                     style={{ textDecoration: "none" }}
                   >
